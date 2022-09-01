@@ -8,10 +8,13 @@ requests: [tutorial here](https://www.geeksforgeeks.org/how-to-install-requests-
 
 dotenv: [tutorial here](https://www.python-engineer.com/posts/dotenv-python/)
 
-## Environment variables
+## How to download
+Green "Code" button on the top right > Download as .zip > Extract to a convenient location
+
+## Project setup
 1. Copy the .env.sample file and rename the copy's filename to .env
 2. Go to [Google Sheets](sheets.google.com) and type `=IMPORTDATA("https://opal.nolt.io/api/csv?apikey=be0d8bd6-b8de-424f-98df-4165f7b65c72&comments=true&votes=true")` into the first cell - it will automatically import
-3. Export everything as a .csv and rename the file to something with no spaces like nolt_feedback.csv
+3. Export everything as a .csv and rename the file to something with no spaces like nolt_feedback.csv, and move the file from your Downloads into the same folder as everything else in this project
 4. Add this filename to the .env like so: `CSV_FILENAME="nolt_feedback.csv"`
 5. Go to your Discourse community > Settings > API > New API Key
 6. Select "single" for user level and "global" for scope
@@ -22,4 +25,6 @@ dotenv: [tutorial here](https://www.python-engineer.com/posts/dotenv-python/)
 11. Last thing: if you want to post everything to a specific category, make sure the category ID number is correct in line 24 of the nolt-import.py script, change as you need, I left it hard-coded because this was for personal use lol
 
 ## Running the script
-command: python3 nolt-import.py
+1. Open your terminal
+2. Navigate to the project folder using the [cd command](https://www.geeksforgeeks.org/cd-command-in-linux-with-examples/)
+3. Run command: `python3 nolt-import.py`
