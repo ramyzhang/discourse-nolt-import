@@ -19,12 +19,15 @@ Green "Code" button on the top right > Download as .zip > Extract to a convenien
 5. Go to your Discourse community > Settings > API > New API Key
 6. Select "single" for user level and "global" for scope
 7. Copy the secret key and add it to .env like so: `API_KEY="YOUR_KEY_HERE"`
-8. Add the Discourse username you're logged into (ideally an admin) to the .env file as well, like so: `API_USER="USERNAME_HERE"` (respect the caps)
+8. Add the Discourse username you're logged into (ideally an admin) to the .env file as well, like so: `API_USER="USERNAME_HERE"` (respect the caps in your username)
 9. Add the API endpoint you need to the .env file, which will likely be `API_ENDPOINT="https://[Discourse URL Here]/posts.json"`
 10. Save your .env file ;D
-11. Last thing: if you want to post everything to a specific category, make sure the category ID number is correct in line 24 of the nolt-import.py script, change as you need, I left it hard-coded because this was for personal use lol
+11. Last thing: if you want to post everything to a specific category, make sure the category ID number is correct in line 24 of the nolt-import.py script, change as you need! Sorry for leaving it hard-coded
 
 ## Running the script
 1. Open your terminal
 2. Navigate to the project folder using the [cd command](https://www.geeksforgeeks.org/cd-command-in-linux-with-examples/)
 3. Run command: `python3 nolt-import.py`
+
+## Gotchas
+Discourse will probably rate-limit you so follow [this tutorial](https://meta.discourse.org/t/global-rate-limits-and-throttling-in-discourse/78612) to make sure that doesn't happen!
