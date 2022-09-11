@@ -13,7 +13,7 @@ Green "Code" button on the top right > Download as .zip > Extract to a convenien
 
 ## Project setup
 1. Copy the .env.sample file and rename the copy's filename to .env
-2. Go to [Google Sheets](sheets.google.com) and type `=IMPORTDATA("https://opal.nolt.io/api/csv?apikey=be0d8bd6-b8de-424f-98df-4165f7b65c72&comments=true&votes=true")` into the first cell - it will automatically import
+2. Go to [Google Sheets](sheets.google.com) and type `=IMPORTDATA("https://[your nolt board]/api/csv?apikey=[your nolt api key]&comments=true&votes=true")` into the first cell - it will automatically import
 3. Export everything as a .csv and rename the file to something with no spaces like nolt_feedback.csv, and move the file from your Downloads into the same folder as everything else in this project
 4. Add this filename to the .env like so: `CSV_FILENAME="nolt_feedback.csv"`
 5. Go to your Discourse community > Settings > API > New API Key
